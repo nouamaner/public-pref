@@ -1,4 +1,19 @@
 --  I promise not to create any merge conflicts in this directory :)
+-- Normal mode
+-- -- Normal mode
+vim.keymap.set('n', 'J', ':m .+1<CR>==', { silent = true })
+vim.keymap.set('n', 'K', ':m .-2<CR>==', { silent = true })
+
+-- Visual mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
+
+vim.keymap.set('n', 'J', ':m .+1<CR>==', { silent = true })
+vim.keymap.set('n', 'K', ':m .-2<CR>==', { silent = true })
+
+-- Visual mode
+vim.keymap.set('v', 'J', ":m '>+1<CR>gv=gv", { silent = true })
+vim.keymap.set('v', 'K', ":m '<-2<CR>gv=gv", { silent = true })
 
 -- Jump to next occurrence of thieword is fine word under cursor in normal mod here ia mtes tesall e
 vim.keymap.set('n', 'f', function()
@@ -26,7 +41,7 @@ vim.g.VM_maps = {
 vim.cmd [[command! W execute 'silent! write !sudo tee % > /dev/null' <bar> edit!]]
 
 vim.keymap.set('n', 'H', ':bprevious<CR>', { silent = true })
-vim.keymap.set('n', 'L', ':bnext<CR>', { silent = true })
+vim.keymap.set('n', 'H', ':bnext<CR>', { silent = true })
 
 -- Save on double Alt press
 -- Save file with Ctrl+S
